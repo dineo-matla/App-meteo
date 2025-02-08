@@ -15,23 +15,35 @@
   </head>
   <body>
     <div class="container">
-      <form>
-        <input
-          type="text"
-          name="text"
-          placeholder="Enter a city..."
-          id="text"
-          required
-        />
-        <input type="submit" name="submit" value="Search" id="submit" />
-      </form>
-      <h1>Paris</h1>
-      <div>Tuesday 14:49, scattered clouds</div>
-      <div>Humidity:66%, Wind:3.13km</div>
-      <br />
-      <div>
-        <span>⛅12℃</span>
-      </div>
+      <header>
+        <form>
+          <input
+            type="text"
+            name="text"
+            placeholder="Enter a city..."
+            class="text-form"
+            required
+          />
+          <input type="submit" name="submit" value="Search" class="button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-data">
+          <h1>Paris</h1>
+          <p>
+            <span id="time">Tuesday 14:49</span>,
+            <span id="description">scattered clouds</span>
+            <br />
+            Humidity: <strong id="humidity">66%,</strong> Wind:
+            <strong id="wind">3.13km</strong>
+          </p>
+        </div>
+        <div class="temperature-container">
+          <div class="weather-icon">⛅</div>
+          <div class="temperature">12</div>
+          <div class="unit">℃</div>
+        </div>
+      </main>
       <footer>
         This project was coded by
         <a href="https://github.com/dineo-matla" target="_blank"
