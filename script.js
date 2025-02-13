@@ -8,6 +8,13 @@ function updateWeatherdata(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img
+      src="${response.data.condition.icon_url}"
+      class="weather-icon"
+    />`;
+  console.log(response);
+
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
@@ -51,4 +58,4 @@ function search(event) {
 let textFormElement = document.querySelector("#text-form");
 textFormElement.addEventListener("submit", search);
 
-searchCity("Dubai");
+searchCity("Cape Town");
