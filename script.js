@@ -1,5 +1,9 @@
 function updateWeatherdata(response) {
-  console.log(response.data.temperature.current);
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = response.data.temperature.current;
+  temperatureElement.innerHTML = Math.round(temperature);
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.city;
 }
 
 function searchCity(city) {
@@ -11,10 +15,10 @@ function searchCity(city) {
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#text-form-input");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
 
 let textFormElement = document.querySelector("#text-form");
 textFormElement.addEventListener("submit", search);
+
+searchCity("Dubai");
