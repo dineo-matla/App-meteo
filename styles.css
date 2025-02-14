@@ -2,11 +2,13 @@ body {
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #eaedf0;
+  background-image: url("Media/backround-img.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-  background-color: #fff;
+  background-color: #ffffff9d;
   box-shadow: 0 30px 50px rgba(96, 92, 104, 0.3);
   max-width: 700px;
   margin: 60px auto;
@@ -25,7 +27,7 @@ form {
 }
 
 .text-form {
-  background-color: #eaedf0;
+  background-color: #f5f6f7;
   padding: 18px 25px;
   font-size: 15px;
   width: 74%;
@@ -34,7 +36,7 @@ form {
 }
 
 .button {
-  background-color: #83b7f1;
+  background-color: #066be5;
   color: #f9f7fe;
   padding: 18px 35px;
   margin-left: 8px;
@@ -65,7 +67,7 @@ h1 {
 }
 
 p {
-  color: rgba(74, 153, 243, 0.7);
+  color: rgb(74 153 243);
   font-size: 18px;
   line-height: 40px;
   margin-top: 0;
@@ -104,7 +106,7 @@ strong {
 
 .weather-forecast-date {
   text-align: center;
-  color: rgba(74, 153, 243, 0.7);
+  color: rgb(74 153 243);
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 10px;
@@ -132,12 +134,12 @@ footer {
   font-family: "monospace", Courier New;
   font-size: 12px;
   text-align: center;
-  color: #8e9092;
+  color: #404347;
 }
 
 a {
   text-decoration: none;
-  color: #4a99f3;
+  color: #006be5;
   transition: all 150ms ease-in-out;
 }
 
