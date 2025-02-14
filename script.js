@@ -13,7 +13,7 @@ function updateWeatherdata(response) {
       src="${response.data.condition.icon_url}"
       class="weather-icon"
     />`;
-  console.log(response);
+  //console.log(response.data.coordinates);
 
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
@@ -49,6 +49,27 @@ function searchCity(city) {
   axios.get(apiUrl).then(updateWeatherdata);
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">⛅</div>
+            <div class="weather-forecast-temperatures">
+              <div class="temp"><strong>15°</strong></div>
+              <div class="temp">9°</div>
+            </div>
+          </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#text-form-input");
@@ -58,4 +79,5 @@ function search(event) {
 let textFormElement = document.querySelector("#text-form");
 textFormElement.addEventListener("submit", search);
 
-searchCity("Cape Town");
+searchCity("Pretoria");
+displayForecast();
